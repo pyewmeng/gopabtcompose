@@ -129,7 +129,7 @@ class MainActivity : ComponentActivity() {
         if (!m_pairedDevices.isEmpty()) {
             for (device: BluetoothDevice in m_pairedDevices) {
                 list.add(device)
-                Log.i("device", ""+device)
+                Log.i("device", ""+device.name)
             }
         } else {
             showToast("no paired bluetooth devices found")

@@ -47,6 +47,8 @@ class ControlActivity: ComponentActivity(){
         var mControlLedLeft = findViewById<Button>(R.id.control_led_left)
         var mControlLedRight = findViewById<Button>(R.id.control_led_right)
         var mControlLedDisConnect = findViewById<Button>(R.id.control_led_disconnect)
+        var mControlLedUltrasound = findViewById<Button>(R.id.control_ultrasound)
+        var mControlLedInfrared = findViewById<Button>(R.id.control_Infrared)
         ConnectToDevice(this).execute()
 
         mControlLedStop.setOnClickListener { sendCommand("0")}
@@ -54,6 +56,8 @@ class ControlActivity: ComponentActivity(){
         mControlLedBackward.setOnClickListener { sendCommand("2")}
         mControlLedLeft.setOnClickListener { sendCommand("3")}
         mControlLedRight.setOnClickListener { sendCommand("4")}
+        mControlLedUltrasound.setOnClickListener { sendCommand("5")}
+        mControlLedInfrared.setOnClickListener { sendCommand("6")}
 
         mControlLedDisConnect.setOnClickListener { disconnect() }
     }

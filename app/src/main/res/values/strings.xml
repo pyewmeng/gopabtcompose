@@ -7,4 +7,5 @@
     <string name="left">Left</string>
     <string name="right">Right</string>
     <string name="disconnect">Disconnect</string>
+    <string name="TitleName">Bluetooth Controller</string>
 </resources>
