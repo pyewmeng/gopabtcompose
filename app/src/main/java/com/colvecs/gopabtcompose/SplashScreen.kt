@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.WindowManager
+import android.view.animation.AnimationUtils
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 @Suppress("DEPRECATION")
@@ -20,6 +23,16 @@ class SplashScreen : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
 
+
+        var topAnim= AnimationUtils.loadAnimation(this,R.anim.top_animation)
+        var bottomAnim= AnimationUtils.loadAnimation(this,R.anim.bottom_animation)
+
+        //Hooks
+        var image = findViewById<ImageView>(R.id.SplashScreenImage)
+        var logo = findViewById<TextView>(R.id.textView)
+
+        image.setAnimation(topAnim);
+        logo.setAnimation(bottomAnim);
         // we used the postDelayed(Runnable, time) method
         // to send a message with a delayed time.
         //Normal Handler is deprecated , so we have to change the code little bit

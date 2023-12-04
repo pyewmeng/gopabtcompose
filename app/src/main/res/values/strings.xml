@@ -2,10 +2,17 @@
     <string name="app_name">BlueTooth Control</string>
     <string name="refresh">Refresh List</string>
     <string name="stop">Stop</string>
-    <string name="on">Forward</string>
-    <string name="off">Backward</string>
+    <string name="forward">Forward</string>
+    <string name="backward">Backward</string>
     <string name="left">Left</string>
     <string name="right">Right</string>
     <string name="disconnect">Disconnect</string>
+    <string name="settings">Settings</string>
+    <string name="speedup">Speed Up</string>
+    <string name="speeddown">Speed Down</string>
+    <string name="ultrasonic">Ultra Sonic</string>
+    <string name="music">Music</string>
+    <string name="infrared">Infra Red</string>
     <string name="TitleName">Bluetooth Controller</string>
+
 </resources>

@@ -13,37 +13,19 @@ import android.util.Log
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ListView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material3.CenterAlignedTopAppBar
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.dimensionResource
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.startActivity
-import com.colvecs.gopabtcompose.ControlActivity.Companion.m_bluetoothAdapter
-import com.colvecs.gopabtcompose.MainActivity.Companion.EXTRA_ADDRESS
 import com.colvecs.gopabtcompose.ui.theme.GopabtcomposeTheme
 
-class MainActivity : ComponentActivity() {
 
+class MainActivity : ComponentActivity() {
+    private lateinit var stopvalue: EditText
+    private lateinit var forwardvalue: EditText
     private var m_bluetoothAdapter: BluetoothAdapter? = null
     private lateinit var m_pairedDevices: Set<BluetoothDevice>
     val REQUEST_ENABLE_BLUETOOTH = 1
@@ -94,6 +76,20 @@ class MainActivity : ComponentActivity() {
                 }
 
                 mDeviceRefresh.setOnClickListener { pairedDeviceList() }
+
+                // Storing data into SharedPreferences
+                val sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE)
+
+                // Creating an Editor object to edit(write to the file)
+                val myEdit = sharedPreferences.edit()
+
+                // Storing the key and its value as the data fetched from edittext
+                myEdit.putInt("stop", 0);
+                myEdit.putInt("forward", 1);
+
+                // Once the changes have been made, we need to commit to apply those changes made,
+                // otherwise, it will throw an error
+                myEdit.commit();
 
             }
         }

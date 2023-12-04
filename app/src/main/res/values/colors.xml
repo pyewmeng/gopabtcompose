@@ -9,4 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gopacolordark">#FFFFB951</color>
     <color name="gopacolor">#FFFFD990</color>
+    <color name="red">#FFFF0000</color>
+    <color name="grey">#FFD3D3D3</color>
+
+
 </resources>
