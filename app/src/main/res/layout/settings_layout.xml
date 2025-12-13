@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:title="@string/TitleName"
+        app:layout_constraintTop_toTopOf="parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:onClick="makeToast"
+                android:src="@drawable/gopa_wordpress_logo" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/screentitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="   Button Configuration"
+        android:textSize="@dimen/padding_large"
+        android:textAllCaps="false"
+        android:background="@color/gopacolordark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_toolbar"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <EditText
+        android:id="@+id/stop"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:background="@color/gopacolor"
+        android:inputType="text"
+        android:text="Stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/property"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <EditText
+        android:id="@+id/forward"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/gopacolor"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Forward"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stop"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <EditText
+        android:id="@+id/backward"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/gopacolor"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Backward"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/forward"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <EditText
+        android:id="@+id/left"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/gopacolor"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backward"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <EditText
+        android:id="@+id/right"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/gopacolor"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/left"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <EditText
+        android:id="@+id/ultrasound"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/gopacolor"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Ultrasonic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/right"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <EditText
+        android:id="@+id/music"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/gopacolor"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Music"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ultrasound"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <EditText
+        android:id="@+id/infrared"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/gopacolor"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Infra Red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/music"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <EditText
+        android:id="@+id/stopValue"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/propertyValue"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <EditText
+        android:id="@+id/forwardValue"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stopValue"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <EditText
+        android:id="@+id/backwardValue"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/forwardValue"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <EditText
+        android:id="@+id/leftValue"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backwardValue"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <EditText
+        android:id="@+id/rightValue"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/leftValue"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <EditText
+        android:id="@+id/ultrasoundValue"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rightValue"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <EditText
+        android:id="@+id/musicvalue"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ultrasoundValue"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <EditText
+        android:id="@+id/infraredValue"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/musicvalue"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <Button
+        android:id="@+id/saveSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/gopacolordark"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <Button
+        android:id="@+id/cancelSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/property"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/gopacolordark"
+        android:text="Property"
+        android:textColor="#050505"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <TextView
+        android:id="@+id/propertyValue"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/gopacolordark"
+        android:text="Value"
+        android:textColor="#050505"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
