@@ -13,6 +13,7 @@ android {
         targetSdk 33
         versionCode 1
         versionName "1.0"
+        setProperty("archivesBaseName", "GoPa BT Controller-$versionName-$versionCode")
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -24,6 +25,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
     compileOptions {
